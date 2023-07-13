@@ -9,7 +9,7 @@ const AuthContext = createContext({
 
 })
 
-export const AuthProvider = ({children}: AuthProviderProps) => {
+const AuthProvider = ({children}: AuthProviderProps) => {
 
     const [isAuthenticated, setIsAuthenticated] = useState(false)
 
@@ -23,5 +23,6 @@ export const AuthProvider = ({children}: AuthProviderProps) => {
   )
 }
 
+export default AuthProvider
 export const useAuth = () => useContext(AuthContext)
 

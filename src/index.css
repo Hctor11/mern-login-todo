@@ -20,3 +20,31 @@ body {
   text-align: center;
   font-family: 'Martian Mono', monospace;
 }
+
+form{
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: auto;
+}
+
+label{
+  margin: 10px;
+}
+
+button{
+  margin-top: 20px;
+  padding: 10px;
+  background-color: aliceblue;
+  color: #202C3C;
+  font-family: 'Martian Mono', monospace;
+  cursor: pointer;
+  border-style: none;
+}
+
+button:hover{
+  background-color: #202C3C;
+  color: aliceblue;
+  border: 2px solid aliceblue;
+}
