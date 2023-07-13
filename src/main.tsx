@@ -1,41 +1,44 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Test from './Test'
-import Login from './routes/Login'
-import Singup from './routes/Singup.tsx'
-import Dashboard from './routes/Dashboard.tsx'
-import './index.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom' //importamos
-import ProtectedRoute from './routes/ProtectedRoute.tsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Test from "./Test";
+import Login from "./routes/Login";
+import Singup from "./routes/Singup.tsx";
+import Dashboard from "./routes/Dashboard.tsx";
+import "./index.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom"; //importamos
+import ProtectedRoute from "./routes/ProtectedRoute.tsx";
+import AuthProvider from "./auth/AuthProvider.tsx";
 
 //creamos router
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Login />
+    element: <Login />,
   },
   {
     path: "/test",
-    element: <Test />
+    element: <Test />,
   },
   {
     path: "/Signup",
-    element: <Singup />
+    element: <Singup />,
   },
   {
     path: "/",
     element: <ProtectedRoute />,
     children: [
       {
-        path: '/Dashboard',
-        element: <Dashboard/>
-      }
-    ]
+        path: "/Dashboard",
+        element: <Dashboard />,
+      },
+    ],
   },
-])
+]);
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
-  </React.StrictMode>,
-)
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
+  </React.StrictMode>
+);
