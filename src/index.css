@@ -55,6 +55,15 @@ button:hover{
   gap: 10px;
 }
 
+.error-message{
+  background-color:#DA4167;
+  padding: 10px;
+  border: 2px solid white;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+}
+
 input{
   padding: 10px;
   font-family: 'Martian Mono', monospace;
