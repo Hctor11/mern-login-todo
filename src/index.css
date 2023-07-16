@@ -48,3 +48,19 @@ button:hover{
   color: aliceblue;
   border: 2px solid aliceblue;
 }
+
+.nav{
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+input{
+  padding: 10px;
+  font-family: 'Martian Mono', monospace;
+}
+
+li, a{
+  text-decoration: underline; 
+  color: aliceblue;
+}

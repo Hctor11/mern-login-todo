@@ -9,7 +9,7 @@ const DefaultLayout = ({children}:DefaultLayoutOptions) => {
     <>
         <header>
             <nav>
-                <ul>
+                <ul className='nav'>
                     <li>
                         <Link to='/'>Home</Link>
                     </li>
